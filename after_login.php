@@ -7,8 +7,6 @@
 
 
 <style>
-
-
 #formboxx{
 	border-radius: 13px;
     border: 2px solid gray;
