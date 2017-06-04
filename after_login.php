@@ -7,13 +7,32 @@
 
 
 <style>
+
+
 #formboxx{
 	border-radius: 13px;
     border: 2px solid gray;
+    padding: 40px; 
+    width: 420px;
+	height: 300px;
+position: fixed;
+left: 10px;
+margin-left: 10px;
+ background:#0aa699;  
+ color:white;
+ text-align:center;
+}
+#wrapper{
+padding:10%;
+}
+#formboxx1{ 
+	border-radius: 13px;
+    border: 2px solid #0aa699;
     padding: 20px; 
     width: 380px;
     height: 230px; 
 }
+
 
 textarea.form-control {
 	
@@ -33,7 +52,8 @@ textarea.form-control {
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
-	#sli{
+
+		#sli{
 			
 			padding: 50px;
 			float: left;
@@ -44,6 +64,7 @@ textarea.form-control {
 <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
 </head>
 
+
 <!-- Title-->
 <title>Sharinggggg....</title>
 </head>
@@ -53,7 +74,8 @@ textarea.form-control {
          $name=$_SESSION['userid'];     
     
 ?>
-		<header id="header">		
+		<header id="header"  background="#0aa699">  
+
 		
 				<nav id="nav-middle">
 						<nav class="navbar" role="navigation">
@@ -68,17 +90,11 @@ textarea.form-control {
 
 										<a href="portspritle.html">Home  | </a>&nbsp;&nbsp;
 												<a href="signout.php">Signout</a>&nbsp;
-
-										</div>
-										</div>
-								
-						</nav>
-				</nav>
-		</header>
-			</header>
-	<center> <br><br><br><br><br><br><br><br>
-<div id="formboxx"> 
-                        	
+												</div> </div>
+		                    </nav>
+							</nav>
+ </header><br><br><br><br><br><br><br><br>
+						<div id="formboxx">
 			                    <form action="#" method="post" class="box-form"
 								style= "float-right">			                     
 									
@@ -92,9 +108,9 @@ textarea.form-control {
 			                    <button type="submit" name="SubmitButton" class="btn">Share!</button>
 								
 			                    </form>
-							
-		                    </div>
-                       
+							</div>
+                       	<center> <br><br><br><br><br><br><br><br>
+
 	<hr>
 <?php
  $user = "root";
@@ -133,27 +149,29 @@ $s_text=$_POST['sid'];
       if( mysql_num_rows( $selectR )==0 ){
         echo 'No Rows Returned';
       }else{
- while( $row2 = mysql_fetch_assoc( $selectR ) ){		  ?>  
-                             <div class="form-bottom" style="margin-right:2px" >
-
-			                        <div class="form-group">
-
+ while( $row2 = mysql_fetch_assoc( $selectR ) ){		?>
+   <div class="form-bottom" style="margin-right:2px" >
+			                 <div class="form-group">
+<div id="wrapper">       
+   <div id="formboxx1">  
        <?php
-          echo "<br> UserID  : {$row2['u_id']} <br>Status id :  {$row2['status_id']}<br>STATUS TEXT: {$row2['status_text']} <br> Posted time : {$row2['p_time']} <br>{$row2['image']} <br> " 
-		  ?>   <input type="button" name="lik" value="like" onclick="fun_addlike()">  &nbsp; <input type="button" name="comments" value="comment" onclick="show_comment()"> 
-		       <script type="text/javascript">
-							var likee = <?{$row2['likes']}?>;
+          echo "<br> {$row2['u_id']} posted at {$row2['p_time']}<hr><br> {$row2['status_text']} <br>{$row2['image']} <br> {$row2['likes']} " 
+		  ?><input type="button" name="lik" value="like" onclick="fun_addlike()">  &nbsp; <input type="button" name="comments" value="comment" onclick="show_comment()"> 
+		    </div></div>
+             <script type="text/javascript">
+					
 							function fun_addlike(){
+                            
+                            var likee = <?php  $row2['likes']  ?>;
 								 likee++;
 								 
-								<? 
-								echo" Likes : {$row2['likes']} <br> " ?>
+								alert("the num of likes ="+ likee);
 							}
 							
-							
+						
 							  </div> </div>   
 							                       
-		</script> <br>
+		</script>  <br>
 	<?php 	}
   } }
     ?></div>
@@ -161,5 +179,7 @@ $s_text=$_POST['sid'];
 	</body>
 
 </html>
+		
+		
 		
 		
