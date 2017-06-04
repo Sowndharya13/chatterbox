@@ -15,12 +15,12 @@ if(isset($_POST['submit']))
    {
     $_SESSION['userid']=$u_id;
 	
-    header('location:main.php');
+    header('location:after_login.php');
    }
    else
    {
     echo'entered username or password is incorrect';
-	>?<a href="portspritle.html"> TryAgain </a> <?
+	>?<a href="index.html"> TryAgain </a> <?
    }
  }
  else
