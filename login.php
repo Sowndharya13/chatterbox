@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
    else
    {
     echo'entered username or password is incorrect';
-	>?<a href="index.html"> TryAgain </a> <?
+	?><a href="index.html"> TryAgain </a> <?php
    }
  }
  else
