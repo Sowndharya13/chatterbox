@@ -24,7 +24,7 @@ $user = "root";
    {
     $_SESSION['userid']=$u_id;
 	
-    header('location:afterlogin.php');
+    header('location:after_login.php');
    }
   if( !( $selectRes = mysql_query( $selectSQL ) ) ){
     echo 'Insertion into the Database Failed - #'.mysql_errno().': '.mysql_error();
