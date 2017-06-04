@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- The new doctype -->
+<html>
+<head>
+<title>chatter</title>
+
+<style>
+textarea.form-control {
+	
+	position:absolute;
+    top:100px;
+    left:50px;
+	width:350px;height: 200px;
+	margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" href="assets/css/form-elements.css">
+		        <link rel="stylesheet" href="assets/css/style.css">
+				
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+<meta name="viewport" content-type="width=device-width initial-scale=1">
+ </head>
+ <body><?php     
+         session_start();
+         $name=$_SESSION['userid'];     
+    
+?>
+ 
+ <div id="header">
+<div id = "logo">
+<img src="assets/img/alsa.jpg" alt ="icon" width="100px" height="80px"/>
+</div>
+<ul id= "navbar"> 
+  <li><a href="#">  Home</a></li>
+  <li><a href="#register"> About</a></li>
+  <li><a href="#content"> Login</a></li>
+ <li><?php     echo "welcome :" . $name . "<br>";  ?>  </li>
+
+</ul>
+</div>
+	<center>
+
+                        <div class="col-sm-5 form-box">
+                        	
+						<div class="textarea.form-control">
+                            <div class="form-bottom">
+			                    <form action="signup.php" method="post" class="registration-form">			                     
+			                        <div class="form-group">
+									
+                        		<h3>Chatter Box</h3>
+                            		<p><b>Share your thoughts here...<b></p>
+                        	
+			                       <input type="text" name="sid" placeholder="Whats on your mind???" class="form-last-name form-control" id="sid">
+			                        </div>
+			                      
+									
+			                        <button type="submit" class="btn">Share!</button>
+			                    </form>
+		                    </div>
+                        </div>
+
+</center>
+	</body>
+
+</html>

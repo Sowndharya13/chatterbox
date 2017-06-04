@@ -1,0 +1,95 @@
+<!DOCTYPE html> <!-- The new doctype -->
+<html>
+<head>
+<title>chatter</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" href="assets/css/form-elements.css">
+		        <link rel="stylesheet" href="assets/css/style.css">
+				
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+<meta name="viewport" content-type="width=device-width initial-scale=1">
+ </head>
+<body>
+
+ <div id="header">
+<div id = "logo">
+<img src="assets/img/alsa.jpg" alt ="icon" width="120px" height="80px"/>
+</div>
+<ul id= "navbar"> 
+  <li><a href="#">  Home</a></li>
+  <li><a href="#"> About</a></li>
+  <li><a href="#content"> Login</a></li>
+    <li><a href="#register"> Signup</a></li>
+	  <li><a href="#"> Contact</a></li>
+
+
+</ul>
+</div>
+
+<div id="navbar">
+ 
+<div class="container" >
+	<section id="content">
+		<center><form action="login.php" method ="post">
+			<h1>Login Form</h1>
+			<div>
+			
+				<input type="text" placeholder="Username..." required="" name="userid" id="userid" />
+			</div>
+			<div> 
+			
+				<input type="password" placeholder="Password..." required="" name="password" id="password" />
+			</div>
+			<div>
+				<input type="submit" value="Log in" name='submit' />
+				<a href="#">Lost your password?</a>
+			</div>
+		</form>
+		<div class="button">
+		</div>
+	</section>
+</div></div>
+<section id="register">
+<div class="col-sm-5 form-box">
+						<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>Sign up now</h3>
+                            		<p>Fill in the form below to get instant access:</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-pencil"></i></div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form" action="signup.php" method="post" class="registration-form">			                     
+			                        <div class="form-group">
+		 		 <label class="sr-only" for="form-last-name">Userid</label>
+			                        	<input type="text" name="uid" placeholder="Userid..." class="form-last-name form-control" id="userid">
+			                        </div>
+			                      
+									<div class="form-group">
+								
+			                        	<label class="sr-only" for="Fpassword">Password</label>
+			                        	<input type="text" name="password" placeholder="password..." class="form-last-name form-control" id="password">
+			                        </div>
+									  <div class="form-group">
+			                        	<label class="sr-only" for="form-email">Email</label>
+			                        	<input type="text" name="mail" placeholder="Email..." class="form-email form-control" id="mail">
+			                        </div>
+								<div class="form-group">
+			                        	<label class="sr-only" for="phone">Phone no</label>
+			                        	<input type="text" name="phone" placeholder="Phone no..." class="form-last-name form-control" id="phone">
+			                        </div>
+			                        <button type="submit" class="btn">Sign me up!</button>
+			                    </form>
+								</div></div>
+		                    
+</section>
+
+
+
+	</body>
+
+</html>
