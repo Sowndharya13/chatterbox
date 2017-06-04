@@ -5,5 +5,5 @@
        unset($_SESSION["password"]);
    
          session_destroy();
-         header('location:portspritle.html');
+         header('location:index.html');
 ?>
