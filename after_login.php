@@ -35,14 +35,7 @@ textarea.form-control {
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
-hr {
-  -moz-transform: rotate(10deg);
-  -webkit-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  transform: rotate(10deg);
-}
-		#sli{
+	#sli{
 			
 			padding: 50px;
 			float: left;
@@ -52,8 +45,6 @@ hr {
 <link type="text/css" rel="stylesheet" href="assets/css/bootstrap/bootstrap-themes.css" />
 <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body background-image="">	
-
 
 <!-- Title-->
 <title>Sharinggggg....</title>
